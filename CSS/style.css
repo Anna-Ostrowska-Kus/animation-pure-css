@@ -1,0 +1,385 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Luckiest Guy', cursive;
+    overflow: hidden;
+}
+
+#sky{
+    display: flex;
+    flex-direction:row;
+    justify-content: left;
+    height: 70vh;
+    background: rgb(13,12,99);
+    background: linear-gradient(180deg, rgba(13,12,99,0.9951330874146533) 20%, rgba(95,143,191,1) 70%, rgba(231,225,237,1) 100%);
+    
+    
+}
+
+
+
+#table{
+    position: relative;
+    height: 30vh;
+    bottom: 0%;
+    background: rgb(167, 30, 30);
+    background-image: repeating-linear-gradient(0deg, #eff3f5,  #eff3f5 2px, transparent 2px, transparent 50px), repeating-linear-gradient(135deg,  #eff3f5,  #eff3f5 2px, transparent 2px, transparent 50px);
+
+}
+
+
+.ufo-object{
+    position: relative;
+    top: 10px;
+    left: 0;
+    animation: move 10s linear infinite;
+    animation-fill-mode: both;
+    
+}
+@keyframes move {
+
+  
+    0% {
+        margin: 0 0;
+    }
+    100% {
+        margin: 0 100%;
+    }
+      
+}
+
+@media (max-width: 480px) {
+    .ufo-object {
+      transform: scale(.5);
+    }
+  }
+
+.ufo-window{
+    position: absolute;
+    height: 100px;
+    width: 160px;
+    top: 10px;
+    left: 10px;
+    background: rgb(44,38,32);
+    background: radial-gradient(circle, rgba(44,38,32,0.9951330874146533) 0%, rgba(140,138,132,1) 68%, rgba(44,38,32,1) 100%);
+    border-top: 5px solid rgb(32, 31, 31);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-bottom: 30px solid rgb(22,49,121); 
+    border-bottom-color: rgb(33,30,60);
+    background: linear-gradient(180deg, rgba(33,30,60,0.9951330874146533) 0%, rgba(204,214,222,1) 50%, rgba(33,30,60,1) 100%);;
+    z-index: 2;   
+}
+.lights{
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: gold;
+    box-shadow: 0 0 10px white;
+    z-index: 3;
+    opacity: 0;
+    animation: lights 1s infinite;
+}
+
+@keyframes lights{
+    from{
+        opacity: 0;
+        transform: scale(1)
+    }
+    to{
+        opacity: 1;
+        transform: scale(1.5)
+    }
+}
+
+
+
+.ufo-light1{
+    position: absolute;
+    top: 90px;
+    left: 20px;
+
+}
+.ufo-light2{
+    position: absolute;
+    top: 90px;
+    left: 80px;
+
+}
+.ufo-light3{
+    position: absolute;
+    top: 90px;
+    left: 140px;
+
+}
+
+.ufo-bottom{
+    position: absolute;
+    top: 80px;
+    left: -100px;
+    width: 400px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgb(45,44,46);
+    background: linear-gradient(180deg, rgba(45,44,46,0.9951330874146533) 0%, rgba(104,105,106,1) 50%, rgba(45,44,46,1) 100%);
+    border-bottom: 5px dotted white;
+    z-index: 1;
+     
+}
+
+
+
+.ufo-letters{
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    width: 150px;
+    color:rgb(144, 194, 29);
+    text-shadow: 5px 5px 8px black;
+    font-weight: bold;
+    font-size: 50px;
+    z-index: 5;
+    opacity:0;
+    animation: letters 10s linear infinite both;
+
+}
+
+@keyframes letters{
+    0%{
+        opacity: 0;
+        top:140px; 
+        font-size: 50px;   
+
+    }
+    20%{
+        opacity:1;
+        top: 500px;
+        font-size: 70px;
+    }
+    
+    40%{
+        opacity:1;
+        top: 400px;
+        font-size: 70px;
+    }
+    
+    60%{
+        opacity: 1;
+        top: 500px;
+        font-size: 70px;
+    }
+    
+    80%{
+        opacity:1;
+        top:140px;
+        font-size: 50px;
+    }
+    100%{
+        opacity:0;
+        top:140px;
+        font-size: 50px;
+    }
+}
+
+
+.plate-object{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 200px;
+       
+}
+
+
+
+
+
+.plate{
+    position: absolute;
+    width: 900px;
+    height: 200px;
+    background: rgb(224,224,227);
+    background: radial-gradient(circle, rgba(224,224,227,0.9951330874146533) 0%, rgba(152,154,156,1) 50%, rgba(224,224,227,1) 100%);
+    border-radius: 50%;
+    border: 40px solid rgb(141, 145, 145) ;
+    transform: skewY(0deg);
+} 
+
+@media (max-width: 480px) {
+    .plate-object {
+      transform: scale(.3);
+    }
+  }
+
+
+.meat
+
+{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 300px;
+    height: 80px;
+    background: rgb(158,108,50);
+    background: linear-gradient(180deg, rgba(158,108,50,0.9951330874146533) 0%, rgba(191,158,64,1) 68%, rgba(158,108,50,1) 100%);
+    border-bottom: 15px solid rgb(238, 213, 102);
+    border-radius: 45%;
+    transform: skewY(0deg);
+    z-index: 3;
+    animation: meat 10s infinite;
+    opacity: 1
+} 
+
+@keyframes meat{
+    0% {
+        opacity:1;
+    }
+    19%{
+        opacity:1;
+    }
+    20%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+
+.peas{ 
+    height: 25px;
+    width: 25px;
+    background-color:green;
+    border-radius: 50%;
+    border-right: 5px solid rgb(79, 241, 166);
+    z-index: 4;
+
+    }
+.peas.one{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 350px;
+}   
+.peas.two{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 380px;
+    
+    
+}   
+.peas.three{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 335px;
+    
+    
+}   
+.peas.four{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 365px;
+    
+    
+}   
+.peas.five{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 395px;
+
+ 
+} 
+.peas.six{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 365px;
+
+ 
+} 
+.peas.seven{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 450px;
+
+ 
+} 
+.peas.eight{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 420px;
+
+ 
+} 
+.fries{
+    width: 20px;
+    height: 150px;
+    background-color: rgb(228, 212, 68);
+    border-left: 10px solid rgb(228, 190, 88);
+    transform: skewY(-30deg) rotateZ(90deg);
+    z-index: 2;
+    opacity:1;
+    animation: fries 10s infinite
+} 
+
+@keyframes fries {
+
+    0%{
+        opacity: 1;
+    }
+
+    59%{
+        opacity:1;
+    }
+    60%{
+        opacity:0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+ .fries.one{
+    position: absolute;
+    margin-bottom: 15px;
+    margin-left: 500px
+    
+}
+.fries.two{
+    position: absolute;
+    margin-bottom: 35px;
+    margin-left: 550px
+    
+}
+.fries.three{
+    position: absolute;
+    margin-bottom: 15px;
+    margin-left: 650px
+   
+}   
+.fries.four{
+    position: absolute;
+    margin-bottom: 35px;
+    margin-left: 600px;
+    transform: skewY(-30deg) rotateZ(-55deg);
+   
+}   
+.fries.five{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 700px;
+    transform: skewY(-30deg) rotateZ(-55deg);
+   
+} 
